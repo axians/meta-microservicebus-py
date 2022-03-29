@@ -1,0 +1,12 @@
+## microServiceBus PY user group is allowed to execute reboot
+
+%@MSB_PY_GROUP@ ALL=NOPASSWD: /sbin/reboot
+%@MSB_PY_GROUP@ ALL=NOPASSWD: /bin/systemctl
+%@MSB_PY_GROUP@ ALL=NOPASSWD: /bin/journalctl
+
+%@MSB_PY_GROUP@ ALL=NOPASSWD: /bin/bash
+%@MSB_PY_GROUP@ ALL=NOPASSWD: /usr/sbin/networksetup
+%@MSB_PY_GROUP@ ALL=NOPASSWD: /sbin/ifconfig
+%@MSB_PY_GROUP@ ALL=NOPASSWD: /usr/bin/hostnamectl
+%@MSB_PY_GROUP@ ALL=NOPASSWD: /usr/bin/wg
+%@MSB_PY_GROUP@ ALL=NOPASSWD: /usr/bin/wg-quick
