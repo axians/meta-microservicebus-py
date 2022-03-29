@@ -2,7 +2,7 @@
 Description=MicroServiceBus as a Service
 
 [Service]
-ExecStart=/usr/local/bin/microservicebus-py
+ExecStart=/usr/bin/microservicebus-py
 WorkingDirectory=@MSB_PY_WORK_DIR@
 Restart=always
 StandardOutput=syslog
