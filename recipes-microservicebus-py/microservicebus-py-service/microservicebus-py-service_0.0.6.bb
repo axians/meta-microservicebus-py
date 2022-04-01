@@ -12,17 +12,17 @@ SYSTEMD_PACKAGES = "${PN}"
 
 SYSTEMD_SERVICE_${PN} = "microservicebus-py.service"
 
-FILES_${PN} += "${systemd_system_unitdir}/microservicebus-py.service"
+FILES_${PN} += "${systemd_system_unitdir}/microservicebus-py.service ${MSB_PY_WORK_DIR}"
 
 #Dynamic parameters for service file, set default values
 MSB_PY_ARG ?= "-w"
 MSB_PY_WORK_DIR ?= "/usr/local/bin/microservicebus-py"
 MSB_PY_USER ?= "msbpy"
-MSB_PY_GROUP ?= "msb"
+MSB_PY_GROUP ?= "msbpy"
 MSB_PY_HOST ?= "microservicebus.com"
 
 do_install() {
-             
+    install -d ${D}/${MSB_PY_WORK_DIR}
     #Replace parameters in service file
     sed -i -e 's:@MSB_PY_WORK_DIR@:${MSB_PY_WORK_DIR}:g' ${WORKDIR}/microservicebus-py.service
     sed -i -e 's:@MSB_PY_USER@:${MSB_PY_USER}:g' ${WORKDIR}/microservicebus-py.service
