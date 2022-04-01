@@ -1,4 +1,4 @@
-DESCRIPTION = "Apps for development images of the cube"
+DESCRIPTION = "Microservicebus-py packages dependencies"
 LICENCE = "CLOSED"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
@@ -12,6 +12,10 @@ RDEPENDS_${PN} = "	python3 \
 					python3-asyncio \
 					python3-packaging \
 					python3-pydbus \
-					python3-pygobject \
-					gobject-introspection \
+					microservicebus-py \
+					microservicebus-py-service \
+					microservicebus-py-user \
+					signalrcore \
+					websocket-client \
+					msgpack \
 					"
