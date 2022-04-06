@@ -1,10 +1,9 @@
 SUMMARY = "Python node for microservicebus. Please visit https://microservicebus.com for more information."
 HOMEPAGE = "https://pypi.org/project/microservicebus-py/"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://PKG-INFO;md5=7274cd045f25492b20f765c37bf16016"
+LIC_FILES_CHKSUM = "file://PKG-INFO;md5=116710ced2180f8232a091a49485a54b"
 
-#SRC_URI[md5sum] = "d2edc8bdbd0fa70032215eddd96b508f"
-SRC_URI[sha256sum] = "26bfb332a0b54ca440f19c5f9abc7c5aa2602158ade4558b972bc236e9600eb3"
+SRC_URI[sha256sum] = "e704ac92e7bfa9091d8ca1714d322d5ec5ae7ccad4ec30297d8812b691306dc0"
 
 PYPI_PACKAGE = "microservicebus-py"
 

@@ -18,4 +18,5 @@ RDEPENDS_${PN} = "	python3 \
 					signalrcore \
 					websocket-client \
 					msgpack \
+					azure-iot-device \
 					"

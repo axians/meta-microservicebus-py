@@ -30,6 +30,11 @@ inherit useradd
 
 USERADD_PACKAGES = "${PN}"
 
+# If no home directory is specified useradd will set to create one in default path normaly </home/>
+# Else if an custom directory is specified useradd will be set to not create the directory only
+# point the users home directory to the custom directory
+MSB_PY_CREATE_HOME = "${@oe.utils.conditional('MSB_PY_HOME_DIR_PATH', '', '-m', '-M -d ' + d.getVar('MSB_PY_HOME_DIR_PATH'), d)}"
+
 # Create msb user
 USERADD_PARAM_${PN} = "-u ${MSB_PY_USER_UID} -c microServiceBus ${MSB_PY_CREATE_HOME} -U -G ${MSB_PY_USER_GROUPS} -r -s /bin/nologin ${MSB_PY_USER}"
 
