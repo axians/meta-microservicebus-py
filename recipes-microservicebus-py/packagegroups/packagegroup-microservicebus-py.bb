@@ -19,4 +19,5 @@ RDEPENDS_${PN} = "	python3 \
 					websocket-client \
 					msgpack \
 					azure-iot-device \
+					paho-mqtt \
 					"
