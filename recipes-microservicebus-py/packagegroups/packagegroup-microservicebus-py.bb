@@ -5,7 +5,6 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 inherit packagegroup
 
 RDEPENDS_${PN} = "	python3 \
-					python3-pip \
 					python3-urllib3 \
 					python3-requests \
 					python3-psutil \
